@@ -1,0 +1,60 @@
+module: 'deep_sdf'
+
+model:
+   input_dim: 3
+   output_dim: 1
+   latent_dim: 256
+   hidden_dim : 512
+   num_layers: 8
+   
+data:
+   dataset: 'breast'
+   dataset_root: './data/'
+   num_volume_points: 5000
+   num_surface_points: 5000
+  
+train:
+   batch_size: 16 # -> requires 20GB VRAM
+   epochs_til_evaluation: 500
+   num_workers: 4
+
+eval:
+   chunk_size: 100_000
+   voxel_resolution: 128
+   num_eval_points: 100_000
+
+loss:
+   objectives: ['surface_loss', 'normal_loss', 'eikonal_loss', 'volume_loss', 'latent_norm']
+   weights: [1.0, 1.0, 0.1, 0.1, 0.01]
+   kwargs: {
+      alpha: 10.0
+   }
+
+optimizer:
+   method: 'adam'
+   lr: 5.0e-4
+   optimizer_kwargs: { 
+      'betas': [0.9, 0.999]
+   }
+   lr_scheduler: 'step_lr'
+   scheduler_kwargs: { 
+      'step_size': 2000,  
+      'gamma': 0.5
+   }
+
+latent_optimizer:
+   method: 'adam'
+   lr: 1.0e-3
+   optimizer_kwargs: {  
+      'betas': [0.9, 0.999]
+   }
+   lr_scheduler: 'step_lr'
+   scheduler_kwargs: { 
+      'step_size': 2000,  
+      'gamma': 0.5
+   }
+
+misc:
+   dtype: 'float32'
+   latent_init: 1.0e-4
+   manual_seed: 41
