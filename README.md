@@ -28,7 +28,7 @@ conda activate irbsm
 ```
 This may take a while.
 
-You can download the iRBSM [here]().
+You can download the iRBSM [here](https://rbsm.re-mic.de/implicit/).
 After downloading, make sure to place the `.pth` file in the `./checkpoints` folder. 
 
 ## Usage
