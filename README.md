@@ -1,6 +1,6 @@
 # iRBSM: A Deep Implicit 3D Breast Shape Model
 
-**[Paper (arXiv)]() | [Project page](https://rbsm.re-mic.de/implicit/)** 
+**[Paper (arXiv)](https://arxiv.org/abs/2412.13244) | [Project page](https://rbsm.re-mic.de/implicit/)** 
 
 [Maximilian Weiherer](https://mweiherer.github.io)$^{1,2}$, Antonia von Riedheim $^3$, [Vanessa Brébant](https://www.linkedin.com/in/vanessa-brebant-0a391843/)$^3$, [Bernhard Egger](https://eggerbernhard.ch)$^1$, [Christoph Palm](https://re-mic.de/en/head/)$^2$\
 $^1$ Friedrich-Alexander-Universität Erlangen-Nürnberg\
@@ -109,7 +109,7 @@ If you use the iRBSM, please cite
     title={iRBSM: A Deep Implicit 3D Breast Shape Model},
     author={Weiherer, Maximilian and von Riedheim, Antonia and Brébant, Vanessa and Egger, Bernhard and Palm, Christoph},
     archivePrefix={arXiv},
-    eprint={},
+    eprint={2412.13244},
     year={2024}
 }
 ```
