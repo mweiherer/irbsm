@@ -217,12 +217,15 @@ class BaseTrainer(ABC):
 
     def _save_checkpoint(self, epoch, eval_chamfer):
         '''
-        Saves model checkpoints and optimizer state dict to disk.
+        Saves model checkpoint to disk.
         :param epoch: The epoch
         '''
         checkpoint = {
             'model_state_dict': self.model.state_dict(),
             'optimizer_state_dict': self.optimizer.state_dict(),
+            'scheduler_state_dict': self.scheduler.state_dict(),
+            'latent_optimizer_state_dict': self.latent_optimizer.state_dict(),  
+            'latent_scheduler_state_dict': self.latent_scheduler.state_dict(),
             'latent_codes_state_dict': self.latent_codes.state_dict(),
             'epoch': epoch
         }
@@ -235,10 +238,13 @@ class BaseTrainer(ABC):
 
     def _load_checkpoint(self, checkpoint):
         '''
-        Loads model checkpoints and optimizer state dict.
+        Loads model checkpoint from disk.
         :param checkpoint: The checkpoint
         '''  
         self.model.load_state_dict(checkpoint['model_state_dict'])
         self.optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+        self.scheduler.load_state_dict(checkpoint['scheduler_state_dict'])
+        self.latent_optimizer.load_state_dict(checkpoint['latent_optimizer_state_dict'])
+        self.latent_scheduler.load_state_dict(checkpoint['latent_scheduler_state_dict'])
         self.latent_codes.load_state_dict(checkpoint['latent_codes_state_dict'])    
         self.epochs_run = checkpoint['epoch']
