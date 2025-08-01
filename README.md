@@ -7,7 +7,7 @@ $^1$ Friedrich-Alexander-Universität Erlangen-Nürnberg\
 $^2$ OTH Regensburg\
 $^3$ University Hospital Regensburg
 
-Official implementation of the paper "iRBSM: A Deep Implicit 3D Breast Shape Model".
+Official implementation of the paper "iRBSM: A Deep Implicit 3D Breast Shape Model", BVM'25.
 
 This repository contains code for the implicit Regensburg Breast Shape Model (iRBSM).
 Along with the inference code (sampling from our model and reconstructing point clouds), we also provide the code that has been used to train our model. 
@@ -104,13 +104,13 @@ To log in to your account, simply type `wandb login` and follow the instructions
 
 ## Citation 
 If you use the iRBSM, please cite
-```
-@misc{weiherer2024irbsm,
+```bibtex
+@inproceedings{weiherer2025irbsm,
     title={iRBSM: A Deep Implicit 3D Breast Shape Model},
     author={Weiherer, Maximilian and von Riedheim, Antonia and Brébant, Vanessa and Egger, Bernhard and Palm, Christoph},
-    archivePrefix={arXiv},
-    eprint={2412.13244},
-    year={2024}
+    booktitle={Proceedings of the German Conference on Medical Image Computing},
+    pages={38–-43},
+    year={2025}
 }
 ```
 and
