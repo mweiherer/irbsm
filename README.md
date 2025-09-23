@@ -1,6 +1,6 @@
 # iRBSM: A Deep Implicit 3D Breast Shape Model
 
-**[Paper (arXiv)](https://arxiv.org/abs/2412.13244) | [Project page](https://rbsm.re-mic.de/implicit/)** 
+**[Paper](https://arxiv.org/abs/2412.13244) | [Project page](https://rbsm.re-mic.de/implicit/)** 
 
 [Maximilian Weiherer](https://mweiherer.github.io)$^{1,2}$, Antonia von Riedheim $^3$, [Vanessa Brébant](https://www.linkedin.com/in/vanessa-brebant-0a391843/)$^3$, [Bernhard Egger](https://eggerbernhard.ch)$^1$, [Christoph Palm](https://re-mic.de/en/head/)$^2$\
 $^1$ Friedrich-Alexander-Universität Erlangen-Nürnberg\
@@ -60,7 +60,7 @@ Optional arguments:
 - `--chunk_size`: The size of the chunks the voxel grid should be split into. Default: `100_000`. If you have a small GPU with only little VRAM, lower this number.
 
 #### Providing Landmarks 
-Whenever the orientation of the given point cloud differes significantly from the model's orientation, you should first *roughly* align both coordinate systems (this is necessary because our model is not invariant to rigid transformations).
+Whenever the orientation of the given point cloud differs significantly from the model's orientation, you should first *roughly* align both coordinate systems (this is necessary because our model is not invariant to rigid transformations).
 The easiest way to achieve this is by providing certain landmark positions. 
 These points can then be used to rigidly align the given point cloud to the model.
 Please provide the following landmarks in *exactly* this order:
@@ -70,7 +70,7 @@ Please provide the following landmarks in *exactly* this order:
 4. Right nipple (from the patient's perspective; so it's actually *left* from your perspective!)
 
 We recommend using [MeshLab](https://www.meshlab.net)'s PickPoints (PP) tool, which allows you to export selected point positions as XML file with `.pp` extension. 
-You can directly pass this file into `reconstruct.py`.
+You can directly pass this file to `reconstruct.py`.
 Alternatively, you can use your favorite point picker tool and pass points as comma-separated `.csv` file.
 Lastly, we also provide a simple application to interactively select points, just run
 ```
@@ -83,7 +83,7 @@ Please also see the README file in `./scripts`.
 ### Preprocess Your Data
 To train our model on your own watertight 3D breast scans, you first need to bring your data into the file format we're using (we're expecting training data to be stored in `.hdf5` files). 
 The following script does that for you; it first scales raw meshes into the unit cube, and then optionally discards inner structures. 
-Finally, it procudes a ready-to-use `.hdf5` file, that you can later plugin into our training pipeline.
+Finally, it produces a ready-to-use `.hdf5` file that you can later plug into our training pipeline.
 Simply type
 ```
 python scripts/preprocess_dataset.py <path-to-your-scans>
