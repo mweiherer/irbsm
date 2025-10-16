@@ -2,7 +2,7 @@
 
 **[Paper](https://arxiv.org/abs/2412.13244) | [Project page](https://rbsm.re-mic.de/implicit/)** 
 
-[Maximilian Weiherer](https://mweiherer.github.io)$^{1,2}$, Antonia von Riedheim $^3$, [Vanessa Brébant](https://www.linkedin.com/in/vanessa-brebant-0a391843/)$^3$, [Bernhard Egger](https://eggerbernhard.ch)$^1$, [Christoph Palm](https://re-mic.de/en/head/)$^2$\
+[Maximilian Weiherer](https://mweiherer.github.io)$^{1,2}$, [Antonia von Riedheim]()$^3$, [Vanessa Brébant](https://www.linkedin.com/in/vanessa-brebant-0a391843/)$^3$, [Bernhard Egger](https://eggerbernhard.ch)$^1$, [Christoph Palm](https://re-mic.de/en/head/)$^2$\
 $^1$ Friedrich-Alexander-Universität Erlangen-Nürnberg\
 $^2$ OTH Regensburg\
 $^3$ University Hospital Regensburg
